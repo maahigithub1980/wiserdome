@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Plans - Wiserdome</title>
+    <meta name="description"
+        content="Transparent pricing plans for NRI property management. Choose from Basic, Standard, or Premium packages.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: var(--spacing-3xl);
+            background: white;
+            box-shadow: var(--shadow-md);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: var(--spacing-md) var(--spacing-lg);
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .pricing-table th {
+            background-color: var(--color-bg-light);
+            font-size: var(--font-size-lg);
+            color: var(--color-primary);
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table .feature-row {
+            text-align: left;
+            font-weight: var(--font-weight-medium);
+        }
+
+        .check {
+            color: green;
+        }
+
+        .cross {
+            color: #ccc;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--spacing-md) 0;
+        }
+
+        .faq-question {
+            font-weight: var(--font-weight-bold);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: var(--spacing-sm);
+            color: var(--color-text-body);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header"
+        style="position: sticky; top: 0; z-index: 1000; background: white; box-shadow: var(--shadow-sm);">
+        <div class="container">
+            <div class="flex justify-between items-center" style="height: var(--header-height);">
+                <a href="index.html" class="logo"
+                    style="font-size: 1.5rem; font-weight: 800; color: var(--color-primary);">Wiserdome</a>
+                <nav class="nav-menu hidden" id="nav-menu"
+                    style="display: flex; gap: var(--spacing-xl); align-items: center;">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="pricing.html" class="nav-link text-primary font-bold">Pricing</a>
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="flex items-center gap-md">
+                    <a href="contact.html" class="btn btn-accent">Book Free Audit</a>
+                    <button class="mobile-menu-btn hidden"
+                        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-bg-light">
+        <div class="container text-center">
+            <h1>Plans & Pricing</h1>
+            <p>Transparent pricing tailored to your property needs.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div style="overflow-x: auto;">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Feature</th>
+                            <th>Basic<br><span style="font-size: 0.9rem; color: #666;">₹1,999/mo</span></th>
+                            <th>Standard<br><span style="font-size: 0.9rem; color: #666;">₹3,499/mo</span></th>
+                            <th>Premium<br><span style="font-size: 0.9rem; color: #666;">₹5,999/mo</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-row">Who it's for</td>
+                            <td>Vacant Properties</td>
+                            <td>Rented Properties</td>
+                            <td>Complete Care</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Monthly Inspections</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Bill Payments</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Key Management</td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Tenant Management</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Rent Collection</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Minor Repairs Coordination</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Legal Support</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row">Deep Cleaning (Annual)</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-row"></td>
+                            <td><a href="contact.html" class="btn btn-outline btn-sm">Select</a></td>
+                            <td><a href="contact.html" class="btn btn-primary btn-sm">Select</a></td>
+                            <td><a href="contact.html" class="btn btn-outline btn-sm">Select</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="text-center" style="margin-bottom: var(--spacing-xl);">Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is my property safe with you? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Absolutely. We conduct thorough background checks on all our staff and
+                        vendors. We also provide digital logs of every visit.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How do I pay for the services? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">You can pay online via credit card, bank transfer, or UPI. We offer monthly,
+                        quarterly, and annual billing cycles.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you cover legal disputes? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Our Premium plan includes basic legal advisory. For complex disputes, we can
+                        connect you with specialized property lawyers at discounted rates.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What cities do you operate in? <span class="faq-toggle">+</span></div>
+                    <div class="faq-answer">Currently, we are active in Mumbai, Bangalore, Delhi NCR, Pune, Hyderabad,
+                        and Chennai.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="background-color: var(--color-bg-dark); color: var(--color-text-white); padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="grid grid-cols-3" style="margin-bottom: var(--spacing-2xl);">
+                <div>
+                    <h3 style="color: white; margin-bottom: var(--spacing-md);">Wiserdome</h3>
+                    <p style="color: #A0AEC0; margin-bottom: var(--spacing-md);">Your trusted partner for property
+                        management in India.</p>
+                </div>
+                <div>
+                    <h4 style="color: white;">Quick Links</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white;">Contact Us</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li>📧 hello@wiserdome.com</li>
+                        <li>📞 +91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2D3748; padding-top: var(--spacing-lg); text-align: center; color: #718096; font-size: var(--font-size-sm);">
+                <p>&copy; 2025 Wiserdome Property Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Simple FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                const toggle = item.querySelector('.faq-toggle');
+                toggle.textContent = parent.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+
+</html>

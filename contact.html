@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wiserdome</title>
+    <meta name="description"
+        content="Get in touch with Wiserdome for a free property audit. We are here to answer all your queries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header"
+        style="position: sticky; top: 0; z-index: 1000; background: white; box-shadow: var(--shadow-sm);">
+        <div class="container">
+            <div class="flex justify-between items-center" style="height: var(--header-height);">
+                <a href="index.html" class="logo"
+                    style="font-size: 1.5rem; font-weight: 800; color: var(--color-primary);">Wiserdome</a>
+                <nav class="nav-menu hidden" id="nav-menu"
+                    style="display: flex; gap: var(--spacing-xl); align-items: center;">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link text-primary font-bold">Contact</a>
+                </nav>
+                <div class="flex items-center gap-md">
+                    <a href="contact.html" class="btn btn-accent">Book Free Audit</a>
+                    <button class="mobile-menu-btn hidden"
+                        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-bg-light text-center">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Book your free property audit today.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-2 gap-md">
+                <!-- Contact Form -->
+                <div class="card">
+                    <h2 style="margin-bottom: var(--spacing-lg);">Send us a message</h2>
+                    <form action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Thank you! We will contact you shortly.');">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-input" required placeholder="John Doe">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-sm">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" class="form-input" required
+                                    placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">WhatsApp Number</label>
+                                <input type="tel" id="phone" class="form-input" required placeholder="+1 123 456 7890">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-sm">
+                            <div class="form-group">
+                                <label for="city" class="form-label">Property City</label>
+                                <select id="city" class="form-select">
+                                    <option value="">Select City</option>
+                                    <option value="mumbai">Mumbai</option>
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="delhi">Delhi NCR</option>
+                                    <option value="pune">Pune</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="type" class="form-label">Property Type</label>
+                                <select id="type" class="form-select">
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="commercial">Commercial</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message (Optional)</label>
+                            <textarea id="message" class="form-textarea" rows="4"
+                                placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <p
+                            style="margin-top: var(--spacing-sm); font-size: var(--font-size-xs); color: var(--color-text-light); text-align: center;">
+                            Your data is safe with us. We usually respond within 24 hours.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center gap-xl" style="padding: var(--spacing-xl);">
+                    <div>
+                        <h3 class="text-primary">Quick Contact</h3>
+                        <p style="margin-bottom: var(--spacing-md);">Prefer to talk directly?</p>
+                        <div class="flex flex-col gap-sm">
+                            <a href="https://wa.me/919876543210" class="btn btn-accent"
+                                style="background-color: #25D366; color: white;">
+                                💬 Chat on WhatsApp
+                            </a>
+                            <a href="tel:+919876543210" class="btn btn-outline">
+                                📞 Call Us: +91 98765 43210
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-primary">Our Offices</h3>
+                        <p><strong>Mumbai (HQ):</strong><br>123, Business Bay, Lower Parel, Mumbai - 400013</p>
+                        <br>
+                        <p><strong>Bangalore:</strong><br>45, Tech Park Road, Indiranagar, Bangalore - 560038</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+        style="background-color: var(--color-bg-dark); color: var(--color-text-white); padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="grid grid-cols-3" style="margin-bottom: var(--spacing-2xl);">
+                <div>
+                    <h3 style="color: white; margin-bottom: var(--spacing-md);">Wiserdome</h3>
+                    <p style="color: #A0AEC0; margin-bottom: var(--spacing-md);">Your trusted partner for property
+                        management in India.</p>
+                </div>
+                <div>
+                    <h4 style="color: white;">Quick Links</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white;">Contact Us</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li>📧 hello@wiserdome.com</li>
+                        <li>📞 +91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2D3748; padding-top: var(--spacing-lg); text-align: center; color: #718096; font-size: var(--font-size-sm);">
+                <p>&copy; 2025 Wiserdome Property Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Wiserdome</title>
+    <meta name="description"
+        content="Step-by-step guide on how Wiserdome manages your property in India. Simple, transparent, and effective.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-2xl) 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--color-border);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--color-primary);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after,
+            .right::after {
+                left: 21px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header"
+        style="position: sticky; top: 0; z-index: 1000; background: white; box-shadow: var(--shadow-sm);">
+        <div class="container">
+            <div class="flex justify-between items-center" style="height: var(--header-height);">
+                <a href="index.html" class="logo"
+                    style="font-size: 1.5rem; font-weight: 800; color: var(--color-primary);">Wiserdome</a>
+                <nav class="nav-menu hidden" id="nav-menu"
+                    style="display: flex; gap: var(--spacing-xl); align-items: center;">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="how-it-works.html" class="nav-link text-primary font-bold">How It Works</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                <div class="flex items-center gap-md">
+                    <a href="contact.html" class="btn btn-accent">Book Free Audit</a>
+                    <button class="mobile-menu-btn hidden"
+                        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-bg-light text-center">
+        <div class="container">
+            <h1>How It Works</h1>
+            <p>A simple 4-step process to complete peace of mind.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="text-primary">Step 1: Share Details</h3>
+                        <p>Fill out our simple online form with your property details and upload basic documents. We'll
+                            schedule an initial consultation call.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="text-primary">Step 2: On-Ground Audit</h3>
+                        <p>Our team visits your property for a comprehensive inspection. We generate a digital 'Home
+                            Health Report' highlighting any immediate needs.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="text-primary">Step 3: Onboarding</h3>
+                        <p>Sign the management agreement digitally. If you need a tenant, we start the search
+                            immediately using our verified network.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="text-primary">Step 4: Relax & Monitor</h3>
+                        <p>Sit back while we handle everything. You get monthly reports, rent credits, and can schedule
+                            video walkthroughs anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section text-center">
+        <div class="container">
+            <h2>Ready to start?</h2>
+            <a href="contact.html" class="btn btn-accent btn-lg" style="margin-top: var(--spacing-md);">Get Your Free
+                Audit</a>
+        </div>
+    </section>
+
+    <footer
+        style="background-color: var(--color-bg-dark); color: var(--color-text-white); padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="grid grid-cols-3" style="margin-bottom: var(--spacing-2xl);">
+                <div>
+                    <h3 style="color: white; margin-bottom: var(--spacing-md);">Wiserdome</h3>
+                    <p style="color: #A0AEC0; margin-bottom: var(--spacing-md);">Your trusted partner for property
+                        management in India.</p>
+                </div>
+                <div>
+                    <h4 style="color: white;">Quick Links</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white;">Contact Us</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li>📧 hello@wiserdome.com</li>
+                        <li>📞 +91 98765 43210</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                style="border-top: 1px solid #2D3748; padding-top: var(--spacing-lg); text-align: center; color: #718096; font-size: var(--font-size-sm);">
+                <p>&copy; 2025 Wiserdome Property Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiserdome | NRI Property Management in India</title>
+    <meta name="description" content="Professional property management for NRIs. We take care of your home in India with rental management, maintenance, and regular checkups.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Page Specific Styles */
+        .hero {
+            background: linear-gradient(rgba(15, 111, 204, 0.9), rgba(10, 78, 145, 0.9)), url('assets/images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-text-white);
+            padding: var(--spacing-4xl) 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            color: var(--color-text-white);
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .hero p {
+            font-size: var(--font-size-xl);
+            margin-bottom: var(--spacing-xl);
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .testimonial-card {
+            background: var(--color-bg-light);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .pricing-preview {
+            border: 1px solid var(--color-border);
+            padding: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition-base);
+        }
+        
+        .pricing-preview:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .pricing-price {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-primary);
+            margin: var(--spacing-md) 0;
+        }
+        
+        /* Step Strip */
+        .step-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-xl);
+        }
+        
+        .step-item {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto var(--spacing-md);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" style="position: sticky; top: 0; z-index: 1000; background: white; box-shadow: var(--shadow-sm);">
+        <div class="container">
+            <div class="flex justify-between items-center" style="height: var(--header-height);">
+                <a href="index.html" class="logo" style="font-size: 1.5rem; font-weight: 800; color: var(--color-primary);">
+                    Wiserdome
+                </a>
+                
+                <nav class="nav-menu hidden" id="nav-menu" style="display: flex; gap: var(--spacing-xl); align-items: center;">
+                    <a href="index.html" class="nav-link text-primary font-bold">Home</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="how-it-works.html" class="nav-link">How It Works</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+                
+                <div class="flex items-center gap-md">
+                    <a href="contact.html" class="btn btn-accent">Book Free Audit</a>
+                    <!-- Mobile Menu Button Placeholder -->
+                    <button class="mobile-menu-btn hidden" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Your Home in India, Our Responsibility</h1>
+            <p>Complete peace of mind for NRIs. We manage your property, tenants, and maintenance while you focus on your life abroad.</p>
+            <div class="flex justify-center gap-md" style="flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-accent btn-lg">Book Free Property Audit</a>
+                <a href="contact.html" class="btn btn-outline" style="color: white; border-color: white;">Schedule a Callback</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto var(--spacing-2xl);">
+                <h2>Trusted by NRIs Worldwide</h2>
+                <p>We specialize in serving Non-Resident Indians and working professionals who need a reliable partner to care for their residential or commercial assets in India.</p>
+            </div>
+            
+            <div class="grid grid-cols-3">
+                <div class="card text-center">
+                    <div class="feature-icon">🌏</div>
+                    <h3>NRIs in USA & UK</h3>
+                    <p>Manage your Indian property remotely with complete transparency and legal compliance.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="feature-icon">🏙️</div>
+                    <h3>Property Investors</h3>
+                    <p>Maximize rental yields and maintain asset value without the daily hassle of management.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="feature-icon">💼</div>
+                    <h3>Busy Professionals</h3>
+                    <p>Focus on your career while we handle tenant calls, repairs, and documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-2xl);">Why Choose Wiserdome?</h2>
+            <div class="grid grid-cols-2">
+                <div class="flex flex-col gap-md">
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>End-to-End Rental Management</strong>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>Routine Maintenance & Repairs</strong>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>Legal & Documentation Support</strong>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>Photo/Video Checkups</strong>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>Dedicated Relationship Manager</strong>
+                    </div>
+                    <div class="flex items-center gap-md">
+                        <span style="color: var(--color-primary);">✓</span>
+                        <strong>Resale & Renovation Assistance</strong>
+                    </div>
+                </div>
+                <div>
+                    <!-- Placeholder for an image -->
+                    <div style="background: #ddd; height: 100%; min-height: 300px; border-radius: var(--border-radius-lg); display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #666;">Image: Property Manager Inspection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How You Stay in Control -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-2xl);">You're Always in Control</h2>
+            <div class="grid grid-cols-3">
+                <div class="text-center">
+                    <div class="feature-icon">📱</div>
+                    <h3>Digital Reports</h3>
+                    <p>Receive detailed monthly home health reports with photos and checklists directly to your inbox.</p>
+                </div>
+                <div class="text-center">
+                    <div class="feature-icon">💬</div>
+                    <h3>Instant Updates</h3>
+                    <p>Direct communication via WhatsApp or Email with your dedicated property manager.</p>
+                </div>
+                <div class="text-center">
+                    <div class="feature-icon">📹</div>
+                    <h3>Video Walkthroughs</h3>
+                    <p>Schedule live video calls to inspect your property from anywhere in the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans & Pricing Preview -->
+    <section class="section section-bg-light">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-md);">Simple, Transparent Pricing</h2>
+            <p class="text-center" style="margin-bottom: var(--spacing-2xl);">Choose a plan that fits your needs. No hidden fees.</p>
+            
+            <div class="grid grid-cols-3">
+                <div class="pricing-preview">
+                    <h3>Basic</h3>
+                    <p>For vacant properties</p>
+                    <div class="pricing-price">₹ 1,999<span style="font-size: 1rem; color: var(--color-text-body); font-weight: normal;">/mo</span></div>
+                    <ul style="text-align: left; margin-bottom: var(--spacing-lg);">
+                        <li>✓ Monthly Inspections</li>
+                        <li>✓ Bill Payments</li>
+                        <li>✓ Key Management</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-outline" style="width: 100%;">View Details</a>
+                </div>
+                <div class="pricing-preview" style="border-color: var(--color-primary); background: white; transform: scale(1.05);">
+                    <div style="background: var(--color-accent); color: white; padding: 4px 8px; border-radius: 4px; display: inline-block; font-size: 0.8rem; margin-bottom: 8px;">Most Popular</div>
+                    <h3>Standard</h3>
+                    <p>For rented properties</p>
+                    <div class="pricing-price">₹ 3,499<span style="font-size: 1rem; color: var(--color-text-body); font-weight: normal;">/mo</span></div>
+                    <ul style="text-align: left; margin-bottom: var(--spacing-lg);">
+                        <li>✓ Everything in Basic</li>
+                        <li>✓ Tenant Management</li>
+                        <li>✓ Rent Collection</li>
+                        <li>✓ Minor Repairs</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-primary" style="width: 100%;">View Details</a>
+                </div>
+                <div class="pricing-preview">
+                    <h3>Premium</h3>
+                    <p>Complete peace of mind</p>
+                    <div class="pricing-price">₹ 5,999<span style="font-size: 1rem; color: var(--color-text-body); font-weight: normal;">/mo</span></div>
+                    <ul style="text-align: left; margin-bottom: var(--spacing-lg);">
+                        <li>✓ Everything in Standard</li>
+                        <li>✓ Legal Support</li>
+                        <li>✓ Deep Cleaning</li>
+                        <li>✓ Priority Support</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-outline" style="width: 100%;">View Details</a>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: var(--spacing-lg); font-size: var(--font-size-sm); color: var(--color-text-light);">* Exact pricing shared after free property audit.</p>
+        </div>
+    </section>
+
+    <!-- Special Offer -->
+    <section class="section" style="background-color: #EBF8FF;">
+        <div class="container">
+            <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: var(--spacing-xl);">
+                <div style="flex: 2;">
+                    <h2 style="color: var(--color-primary-dark);">Special Offer for First-Time NRIs</h2>
+                    <ul style="margin-bottom: var(--spacing-lg);">
+                        <li style="margin-bottom: 8px;">🎁 <strong>First Month Free</strong> on annual plans</li>
+                        <li style="margin-bottom: 8px;">📋 <strong>Free Property Audit</strong> & Rental Estimation</li>
+                        <li>🏷️ <strong>10% Discount</strong> for multiple properties</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-accent">Claim Offer Now</a>
+                </div>
+                <div style="flex: 1; text-align: center;">
+                    <div style="font-size: 5rem;">🎉</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Strip -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-2xl);">How It Works</h2>
+            <div class="step-strip">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Enquire</h3>
+                    <p>Fill our form to schedule a call.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Audit</h3>
+                    <p>We visit and inspect your property.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Manage</h3>
+                    <p>Relax while we handle everything.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: var(--color-bg-dark); color: var(--color-text-white); padding: var(--spacing-3xl) 0;">
+        <div class="container">
+            <div class="grid grid-cols-3" style="margin-bottom: var(--spacing-2xl);">
+                <div>
+                    <h3 style="color: white; margin-bottom: var(--spacing-md);">Wiserdome</h3>
+                    <p style="color: #A0AEC0; margin-bottom: var(--spacing-md);">Your trusted partner for property management in India. We ensure your assets are safe, profitable, and well-maintained.</p>
+                    <div class="flex gap-sm">
+                        <!-- Social Icons Placeholder -->
+                        <a href="#" style="color: white;">FB</a>
+                        <a href="#" style="color: white;">IN</a>
+                        <a href="#" style="color: white;">TW</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: white;">Quick Links</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li style="margin-bottom: 8px;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 8px;"><a href="services.html">Services</a></li>
+                        <li style="margin-bottom: 8px;"><a href="pricing.html">Pricing</a></li>
+                        <li style="margin-bottom: 8px;"><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white;">Contact Us</h4>
+                    <ul style="color: #A0AEC0;">
+                        <li style="margin-bottom: 8px;">📧 hello@wiserdome.com</li>
+                        <li style="margin-bottom: 8px;">📞 +91 98765 43210</li>
+                        <li>📍 Mumbai • Bangalore • Delhi • Pune</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #2D3748; padding-top: var(--spacing-lg); text-align: center; color: #718096; font-size: var(--font-size-sm);">
+                <p>&copy; 2025 Wiserdome Property Management. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
